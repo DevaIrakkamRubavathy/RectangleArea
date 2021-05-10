@@ -14,7 +14,7 @@ public class RectangleTest {
     }
 
     @Test
-    void shouldReturnPositiveValueWhenBothPositive() {
+    void shouldReturnPositiveValueWhenBothParametersPositive() {
 
         Rectangle rectangle = new Rectangle(5, 5);
         double expectedArea = 25;
@@ -22,6 +22,16 @@ public class RectangleTest {
         double actualArea = rectangle.getArea();
 
         Assertions.assertEquals(expectedArea, actualArea);
+    }
+
+    @Test
+    void shouldReturnDecimalWhenDecimalParameters() {
+        Rectangle rectangle = new Rectangle(5.5, 5);
+        double expected = 27.5;
+
+        double actual = rectangle.getArea();
+
+        Assertions.assertEquals(expected, actual);
     }
     /*
     - Binding the data with the test

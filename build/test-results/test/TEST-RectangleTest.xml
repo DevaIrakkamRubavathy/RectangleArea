@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RectangleTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-05-10T06:56:53" hostname="Devas-MacBook-Pro.local" time="0.029">
+<testsuite name="RectangleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-10T07:01:21" hostname="Devas-MacBook-Pro.local" time="0.015">
   <properties/>
-  <testcase name="shouldReturnPositiveValueWhenBothPositive()" classname="RectangleTest" time="0.026"/>
-  <testcase name="shouldReturnOneWhenWidthAndHeightEqualsToOne()" classname="RectangleTest" time="0.002"/>
+  <testcase name="shouldReturnDecimalWhenDecimalParameters()" classname="RectangleTest" time="0.015"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
