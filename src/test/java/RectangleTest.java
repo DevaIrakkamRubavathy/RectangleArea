@@ -33,6 +33,16 @@ public class RectangleTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    void shouldReturnZeroWhenParameterZero() {
+        Rectangle rectangle = new Rectangle(0, 5);
+        double expected = 0;
+
+        double actual = rectangle.getArea();
+
+        Assertions.assertEquals(expected, actual);
+    }
     /*
     - Binding the data with the test
     - assertEquals(expected, actual)
