@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RectangleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-10T07:06:22" hostname="Devas-MacBook-Pro.local" time="0.021">
+<testsuite name="RectangleTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-05-10T07:36:03" hostname="Devas-MacBook-Pro.local" time="0.018">
   <properties/>
-  <testcase name="shouldReturnZeroWhenParameterZero()" classname="RectangleTest" time="0.021"/>
+  <testcase name="shouldReturnPositiveValueWhenBothParametersPositive()" classname="RectangleTest" time="0.013"/>
+  <testcase name="shouldReturnZeroWhenPassZeroAsParameter()" classname="RectangleTest" time="0.001"/>
+  <testcase name="shouldReturnDecimalWhenDecimalParameters()" classname="RectangleTest" time="0.0"/>
+  <testcase name="shouldReturnOneWhenBothParametersEqualsToOne()" classname="RectangleTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

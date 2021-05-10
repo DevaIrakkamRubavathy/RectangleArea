@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 public class RectangleTest {
     @Test
-    public void shouldReturnOneWhenWidthAndHeightEqualsToOne() {
+    public void shouldReturnOneWhenBothParametersEqualsToOne() {
 
         Rectangle rectangle = new Rectangle(1, 1);
         double expectedArea = 1;
@@ -27,32 +27,20 @@ public class RectangleTest {
     @Test
     void shouldReturnDecimalWhenDecimalParameters() {
         Rectangle rectangle = new Rectangle(5.5, 5);
-        double expected = 27.5;
+        double expectedArea = 27.5;
 
-        double actual = rectangle.getArea();
+        double actualArea = rectangle.getArea();
 
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(expectedArea, actualArea);
     }
 
     @Test
-    void shouldReturnZeroWhenParameterZero() {
+    void shouldReturnZeroWhenPassZeroAsParameter() {
         Rectangle rectangle = new Rectangle(0, 5);
-        double expected = 0;
+        double expectedArea = 0;
 
-        double actual = rectangle.getArea();
+        double actualArea = rectangle.getArea();
 
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(expectedArea, actualArea);
     }
-    /*
-    - Binding the data with the test
-    - assertEquals(expected, actual)
-    - better naming convention
-    - remove comment
-    - method name should be generalize
-    3 == 5
-    5 == 3
-
-    unit value
-    positive value
-     */
 }
