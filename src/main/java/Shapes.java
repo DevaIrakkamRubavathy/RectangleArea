@@ -1,3 +1,10 @@
 interface Shapes {
-    public double area(double width, double height);
+    public double getArea();
 }
+
+/*[anchor/pair] Add.
+
+This commit will "Add/Remove/Refactor/_____________"
+
+This commit will "[p1/p2] Add. Function
+*/
