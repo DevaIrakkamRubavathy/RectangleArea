@@ -1,4 +1,6 @@
 interface Shapes {
-    public double getArea();
+    public double area();
+
+    public double perimeter();
 }
 
