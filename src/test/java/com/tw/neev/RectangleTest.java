@@ -1,6 +1,9 @@
+package com.tw.neev;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
+
 
 public class RectangleTest {
     @Test
@@ -26,7 +29,7 @@ public class RectangleTest {
     }
 
     @Test
-    void shouldReturnDecimalWhenDecimalParameters() {
+    void shouldReturnDecimalWhenDecimalParameters()  {
         Rectangle rectangle = new Rectangle(5.5, 5);
         double expectedArea = 27.5;
 
@@ -37,16 +40,14 @@ public class RectangleTest {
 
     @Test
     void shouldRiseExceptionWhenPassLessThanOneAsLength() {
-         Executable executable = () -> {new Rectangle(-1, 5);};
-        //Assertions.assertNull(rectangle);
-        Assertions.assertThrows(IllegalArgumentException.class,executable);
+         Executable executable = () -> new Rectangle(-1, 5);
+         Assertions.assertThrows(NegativeLengthAndBreadth.class,executable);
     }
 
     @Test
     void shouldRiseExceptionWhenPassLessThanOneAsWidth() {
-        Executable executable = () -> {new Rectangle(1, -5);};
-        //Assertions.assertNull(rectangle);
-        Assertions.assertThrows(IllegalArgumentException.class,executable);
+        Executable executable = () -> new Rectangle(1, -5);
+        Assertions.assertThrows(NegativeLengthAndBreadth.class,executable);
     }
 
     @Test
@@ -72,7 +73,7 @@ public class RectangleTest {
     }
 
     @Test
-    void shouldReturnDecimalWhenDecimalParameter() {
+    void shouldReturnDecimalWhenDecimalParameter(){
         Rectangle rectangle = new Rectangle(5.5, 5);
         double expectedPerimeter = 21;
 
@@ -81,13 +82,4 @@ public class RectangleTest {
         Assertions.assertEquals(expectedPerimeter, actualPerimeter);
     }
 
-    @Test
-    void shouldRiseExceptionWhenPassLessThanOneAsParameters() {
-        Rectangle rectangle = new Rectangle(-1, 5);
-        //Assertions.assertNull(rectangle);
-        Assertions.assertThrows(IllegalArgumentException.class, () ->
-        {
-            rectangle.perimeter();
-        });
-    }
 }
