@@ -43,6 +43,13 @@ public class RectangleTest {
     }
 
     @Test
+    void shouldRiseExceptionWhenPassLessThanOneAsWidth() {
+        Executable executable = () -> {new Rectangle(1, -5);};
+        //Assertions.assertNull(rectangle);
+        Assertions.assertThrows(IllegalArgumentException.class,executable);
+    }
+
+    @Test
     public void shouldReturnFourWhenBothParametersEqualsToOne() {
 
         Rectangle rectangle = new Rectangle(1, 1);
