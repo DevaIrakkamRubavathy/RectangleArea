@@ -22,6 +22,23 @@ public class SquareTest {
         Assertions.assertEquals(expectedArea, actualArea);
     }
 
+    @Test
+    void shouldReturnFourValueWhenParameterUnit() {
+        Square square = new Square(1);
+        double expectedPerimeter = 4;
+        double actualPerimeter= square.Perimeter();
+        Assertions.assertEquals(expectedPerimeter, actualPerimeter);
+    }
+
+    @Test
+    void shouldReturnPositiveValueWhenParameterPositive() {
+        Square square = new Square(5);
+        double expectedPerimeter= 20;
+        double actualPerimeter= square.Perimeter();
+        Assertions.assertEquals(expectedPerimeter, actualPerimeter);
+    }
+
+
   /* @Test
     void shouldRiseExceptionWhenPassLessThanOneAsSide() {
         Executable executable = () -> new Square(-1);
