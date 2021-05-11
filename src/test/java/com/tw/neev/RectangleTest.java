@@ -41,13 +41,13 @@ public class RectangleTest {
     @Test
     void shouldRiseExceptionWhenPassLessThanOneAsLength() {
         Executable executable = () -> new Rectangle(-1, 5);
-        Assertions.assertThrows(InvalidDimension.class, executable);
+        Assertions.assertThrows(InvalidDimensionException.class, executable);
     }
 
     @Test
     void shouldRiseExceptionWhenPassLessThanOneAsWidth() {
         Executable executable = () -> new Rectangle(1, -5);
-        Assertions.assertThrows(InvalidDimension.class, executable);
+        Assertions.assertThrows(InvalidDimensionException.class, executable);
     }
 
     @Test
