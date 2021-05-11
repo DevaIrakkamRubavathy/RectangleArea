@@ -29,7 +29,7 @@ public class RectangleTest {
     }
 
     @Test
-    void shouldReturnDecimalWhenDecimalParameters()  {
+    void shouldReturnDecimalWhenDecimalParameters() {
         Rectangle rectangle = new Rectangle(5.5, 5);
         double expectedArea = 27.5;
 
@@ -40,14 +40,14 @@ public class RectangleTest {
 
     @Test
     void shouldRiseExceptionWhenPassLessThanOneAsLength() {
-         Executable executable = () -> new Rectangle(-1, 5);
-         Assertions.assertThrows(NegativeLengthAndBreadth.class,executable);
+        Executable executable = () -> new Rectangle(-1, 5);
+        Assertions.assertThrows(InvalidDimension.class, executable);
     }
 
     @Test
     void shouldRiseExceptionWhenPassLessThanOneAsWidth() {
         Executable executable = () -> new Rectangle(1, -5);
-        Assertions.assertThrows(NegativeLengthAndBreadth.class,executable);
+        Assertions.assertThrows(InvalidDimension.class, executable);
     }
 
     @Test
@@ -73,7 +73,7 @@ public class RectangleTest {
     }
 
     @Test
-    void shouldReturnDecimalWhenDecimalParameter(){
+    void shouldReturnDecimalWhenDecimalParameter() {
         Rectangle rectangle = new Rectangle(5.5, 5);
         double expectedPerimeter = 21;
 
@@ -81,5 +81,28 @@ public class RectangleTest {
 
         Assertions.assertEquals(expectedPerimeter, actualPerimeter);
     }
+
+    @Test
+    public void shouldReturnPositiveInfinityWhenPassingGreaterThanMaxValueForArea() {
+
+        Rectangle rectangle = new Rectangle(Double.MAX_VALUE, Double.MAX_VALUE);
+        double expectedArea = Double.POSITIVE_INFINITY;
+
+        double actualArea = rectangle.area();
+
+        Assertions.assertEquals(expectedArea, actualArea);
+    }
+
+    @Test
+    public void shouldReturnPositiveInfinityWhenPassingGreaterThanMaxValueForPerimeter() {
+
+        Rectangle rectangle = new Rectangle(Double.MAX_VALUE, Double.MAX_VALUE);
+        double expectedPerimeter = Double.POSITIVE_INFINITY;
+
+        double actualPerimeter = rectangle.perimeter();
+
+        Assertions.assertEquals(expectedPerimeter, actualPerimeter);
+    }
+
 
 }

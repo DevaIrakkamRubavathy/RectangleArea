@@ -26,22 +26,22 @@ public class SquareTest {
     void shouldReturnFourValueWhenParameterUnit() {
         Square square = new Square(1);
         double expectedPerimeter = 4;
-        double actualPerimeter= square.Perimeter();
+        double actualPerimeter = square.Perimeter();
         Assertions.assertEquals(expectedPerimeter, actualPerimeter);
     }
 
     @Test
     void shouldReturnPositiveValueWhenParameterPositive() {
         Square square = new Square(5);
-        double expectedPerimeter= 20;
-        double actualPerimeter= square.Perimeter();
+        double expectedPerimeter = 20;
+        double actualPerimeter = square.Perimeter();
         Assertions.assertEquals(expectedPerimeter, actualPerimeter);
     }
 
 
-  /* @Test
+    @Test
     void shouldRiseExceptionWhenPassLessThanOneAsSide() {
         Executable executable = () -> new Square(-1);
-        Assertions.assertThrows(NegativeLengthAndBreadth.class,executable);
-    }*/
+        Assertions.assertThrows(InvalidDimension.class, executable);
+    }
 }
