@@ -7,13 +7,22 @@ import org.junit.jupiter.api.function.Executable;
 public class SquareTest {
 
     @Test
+    void shouldReturnUnitValueWhenParameterUnit() {
+        Square square = new Square(1);
+        double expectedArea = 1;
+        double actualArea = square.Area();
+        Assertions.assertEquals(expectedArea, actualArea);
+    }
+
+    @Test
     void shouldReturnPositiveValueWhenParametersPositive() {
         Square square = new Square(5);
         double expectedArea = 25;
         double actualArea = square.Area();
         Assertions.assertEquals(expectedArea, actualArea);
     }
-   /* @Test
+
+  /* @Test
     void shouldRiseExceptionWhenPassLessThanOneAsSide() {
         Executable executable = () -> new Square(-1);
         Assertions.assertThrows(NegativeLengthAndBreadth.class,executable);
